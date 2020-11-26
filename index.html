@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link id="stylesheetlink" rel="stylesheet" href="css/styleDark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
+    <script src="js/cookieshandler.js"></script>
+    <title>Test your typing speed</title>
+</head>
+<body>
+    <div id="myCookieConsent">
+        <a id="cookieButton">Close</a>
+        <div>This website is using cookies, by using this website you agree to cookies being stored on your device.</div>
+    </div>
+    <div class="wrapper">
+        <div id="TabWrapper">
+            <div class="TabItem" onclick="tabManager(this)">Main</div>
+            <div class="TabItem" onclick="tabManager(this)">Graph</div>
+            <div class="TabItem" onclick="tabManager(this)">Stats</div>
+            <div class="TabItem" onclick="tabManager(this)">Settings</div>
+        </div>
+
+        <div id="textShow" spellcheck="false";>
+        </div>
+        <div id="inputField" spellcheck="false">
+            <div id="timeField">
+                <p id="timeCounter">1:00</p>
+            </div>
+            <div id="wpmField">
+                <p id="wpmCounter">0 WPM</p>
+            </div>
+            <input id="inputA">
+        </div>
+    </div>
+
+    <div class="resultWrapper">
+        <p id="result">Wow!<br> a whole whopping<br> {WPM} words per minute! <br> <br>CTRL R to play again!</p>
+    </div>
+
+    <script>
+        $(window).on("load",function(){
+            document.getElementsByClassName("TabItem")[0].style.backgroundColor = "rgb(30,30,30)"
+            $(".resultWrapper").hide()
+            requestWordList()
+            enter()
+            valueUpdate()
+        });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>
