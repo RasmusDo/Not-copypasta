@@ -11,4 +11,4 @@ Statistics page.
 Changable language.
 Changable text settings.
 
-matln.github.io/typingspeed
+
